@@ -31,6 +31,24 @@ local STATE_VISIBLE = 4
 local currentState
 local stateElapsedTime = 0
 
+--Variables and Functions to enable/disable all actions
+local enabledActions = {}
+
+local function DisableAllActions()
+	for _, action in ipairs(Input.GetActions()) do
+		if Input.IsActionEnabled(action) and action ~= ACTION_NAME then
+			table.insert(enabledActions, action)
+			Input.DisableAction(action)
+		end
+	end
+end
+
+local function ReEnableActions()
+	for _, action in ipairs(enabledActions) do
+		Input.EnableAction(action)
+	end
+end
+
 --Blackout Functions
 local function SetUIOpacity(percent)
 	BLACKOUT_UI.opacity = percent
@@ -92,6 +110,7 @@ local function OnActionPressed()
     
     Events.BroadcastToServer("EnableMovement", LOCAL_PLAYER)
     
+    ReEnableActions()
 end
 
 local function DisconnectActionEvent()
@@ -110,6 +129,8 @@ ACTION_EVENT = Input.actionPressedEvent:Connect(function(player, action, value)
 end)
 
 --Initial Code
+DisableAllActions()
+
 SetState(STATE_FADING_OUT)
 
 UI_CONTAINER = World.SpawnAsset(ANIMATION_UI, {parent = PARENT})

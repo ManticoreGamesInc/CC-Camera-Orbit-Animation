@@ -4,5 +4,17 @@ Assets {
   PlatformAssetType: 30
   SerializationVersion: 119
   VirtualFolderSetAsset {
+    Folders {
+      VirtualFolderPath: "Camera Orbit Animation"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Camera Orbit Animation"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Camera Orbit Animation"
+      PlatformAssetType: 29
+    }
   }
 }

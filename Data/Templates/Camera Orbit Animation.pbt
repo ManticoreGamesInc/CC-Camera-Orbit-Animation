@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 8595810780840647339
+        ChildIds: 1789148826009020676
         ChildIds: 9048535836852128335
         ChildIds: 10681609489107774144
         UnregisteredParameters {
@@ -48,7 +49,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ActionName"
-            String: "Jump"
+            String: "Main Menu"
           }
           Overrides {
             Name: "cs:OrbitPosition:tooltip"
@@ -137,6 +138,43 @@ Assets {
         Script {
           ScriptAsset {
             Id: 10003752325558802670
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 1789148826009020676
+        Name: "Camera Orbit Animation Bindings"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7967176572739956797
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        BindingSet {
+          BindingSetAsset {
+            Id: 14031286742830150192
           }
         }
         NetworkRelevanceDistance {
@@ -577,4 +615,6 @@ Assets {
     }
   }
   SerializationVersion: 119
+  DirectlyPublished: true
+  VirtualFolderPath: "Camera Orbit Animation"
 }

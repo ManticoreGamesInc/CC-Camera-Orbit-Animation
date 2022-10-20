@@ -489,4 +489,6 @@ Assets {
     }
   }
   SerializationVersion: 119
+  DirectlyPublished: true
+  VirtualFolderPath: "Camera Orbit Animation"
 }

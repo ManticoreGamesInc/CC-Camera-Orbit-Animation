@@ -2,7 +2,7 @@ Assets {
   Id: 14031286742830150192
   Name: "Camera Orbit Animation Bindings"
   PlatformAssetType: 29
-  SerializationVersion: 119
+  SerializationVersion: 120
   VirtualFolderPath: "Camera Orbit Animation"
   BindingSetAsset {
     Bindings {
